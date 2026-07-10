@@ -1,0 +1,3 @@
+[submodule "middleware/protocol/nanopb"]
+	path = middleware/protocol/nanopb
+	url = https://github.com/nanopb/nanopb.git

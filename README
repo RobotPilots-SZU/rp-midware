@@ -1,0 +1,24 @@
+# 中间件介绍
+
+## 简述
+这个中间件的设计初衷是：
+- OS-agnostic的
+- 专注通信(跨线程/跨进程)的
+- 可复用的
+- 平台无关的(soc/mcu)
+
+因此，这个中间件将支持zephyr构建系统下的编译，也支持独立编译全部模块
+
+## 构建实现
+### 1. 入口分离
+1. 根目录下的CMakeLists.txt把中间件本身作为了项目，用原生的gcc直接 cmake -S . -B build即可
+2. 在使用west 系统构建时，module.yaml会指明cmake的构建目录和Kconfig的路径，即breeze-middleware/zephyr/
+
+### 2. 宏开关管理
+1. 接入zephyr构建系统需要打开CONFIG_MIDDLEWARE宏，并把静态库链接进固件
+
+### 3. 外部库源码独立编译
+1. 无论是否走zephyr构建系统都又外部库自己的CMakeLists.txt来构建自身
+
+## 构建示例
+1. 独立构建: cmake -S . -B build && cmake --build build

@@ -1,0 +1,22 @@
+# Copyright (c) 2025 RobotPilots-SZU
+# SPDX-License-Identifier: Apache-2.0
+
+config ZEPHYR_MIDDLEWARE_MODULE
+	bool
+
+menuconfig MIDDLEWARE
+	bool "Breeze middleware support"
+	help
+	  Enable the OS-agnostic Breeze middleware libraries and link them
+	  into the application.
+
+if MIDDLEWARE
+
+config MIDDLEWARE_PROTOCOL
+	bool "Protocol (nanopb) support"
+	default y
+	help
+	  Build the nanopb runtime together with the generated protobuf
+	  message sources under middleware/protocol/generated.
+
+endif # MIDDLEWARE

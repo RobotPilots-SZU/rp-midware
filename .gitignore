@@ -1,0 +1,42 @@
+# ---- Build output ----
+build/
+Build/
+build_*/
+out/
+cmake-build-*/
+
+# ---- CMake generated ----
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# ---- Zephyr generated ----
+.west/
+twister-out/
+twister-out.*/
+
+# ---- Compiled objects / binaries ----
+*.o
+*.obj
+*.a
+*.so
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.d
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
