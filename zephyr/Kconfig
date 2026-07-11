@@ -12,6 +12,21 @@ menuconfig MIDDLEWARE
 
 if MIDDLEWARE
 
+config MIDDLEWARE_OSAL
+	bool "OS Abstraction Layer (OSAL)"
+	default y
+	help
+	  Build the OSAL core (log/time/mutex/memory) together with the Zephyr
+	  backend that implements and injects these services.
+
+if MIDDLEWARE_OSAL
+
+module = MIDDLEWARE_OSAL
+module-str = middleware osal
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # MIDDLEWARE_OSAL
+
 config MIDDLEWARE_PROTOCOL
 	bool "Protocol (nanopb) support"
 	default y
