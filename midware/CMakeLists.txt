@@ -3,7 +3,6 @@
 #
 # Aggregates all OS-agnostic middleware libraries.
 
-add_subdirectory(osal)
 add_subdirectory(protocol)
 
 # link module (add once it has sources)

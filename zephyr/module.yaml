@@ -1,9 +1,0 @@
-# Copyright (c) 2025 RobotPilots-SZU
-# SPDX-License-Identifier: Apache-2.0
-
-name: middleware
-build:
-  # Zephyr integration lives under zephyr/. The core middleware libraries in
-  # middleware/ stay OS-agnostic and are reused via add_subdirectory().
-  cmake: zephyr
-  kconfig: zephyr/Kconfig
