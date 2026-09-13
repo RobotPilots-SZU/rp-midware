@@ -39,13 +39,11 @@ add_library(middleware::protocol ALIAS middleware_protocol)
 target_include_directories(middleware_protocol
     PUBLIC
         ${INCLUDE_DIR}
-        ${NANOPB_DIR}
+        # ${NANOPB_DIR}
     PRIVATE
         ${GENERATED_DIR}
 )
 
-# The C++ wrapper logs through OSAL.
-target_link_libraries(middleware_protocol PUBLIC middleware::osal)
 
 # nanopb build-time options. Adjust as needed; kept minimal and OS-free.
 target_compile_definitions(middleware_protocol PUBLIC

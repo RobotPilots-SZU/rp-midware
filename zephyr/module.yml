@@ -1,0 +1,7 @@
+# Copyright (c) 2025 RobotPilots-SZU
+# SPDX-License-Identifier: Apache-2.0
+
+name: midware
+build:
+  cmake: .
+  kconfig: Kconfig

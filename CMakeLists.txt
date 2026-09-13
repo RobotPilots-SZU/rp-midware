@@ -19,7 +19,7 @@ project(breeze_middleware
 
 option(MIDDLEWARE_BUILD_TESTS "Build stand-alone middleware tests" OFF)
 
-add_subdirectory(middleware)
+add_subdirectory(midware)
 
 if(MIDDLEWARE_BUILD_TESTS)
     enable_testing()
