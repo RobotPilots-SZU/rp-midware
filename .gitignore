@@ -40,3 +40,9 @@ twister-out.*/
 # ---- OS files ----
 .DS_Store
 Thumbs.db
+
+# Conan local build presets
+CMakeUserPresets.json
+__pycache__/
+
+.venv/
